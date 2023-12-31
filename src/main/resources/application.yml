@@ -6,6 +6,6 @@ spring:
        client:
          registration:
            google:
-             client-id: ${secrets.googleClientKey}'
+             client-id: '${secrets.googleClientKey}'
              client-secret: '${secrets.googleClientSecret}'
              redirect-uri: '${secrets.googleRedirectUri}'
