@@ -1,4 +1,4 @@
-package Configuration;
+package com.aipainter.authenticationservice.configurations;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Getter
 @Setter
 public class Secrets {
-    private String oauthClientKey;
-    private String oauthClientSecret;
-    private String oauthIssuerUri;
+    private String googleClientKey;
+    private String googleClientSecret;
+    private String googleRedirectUri;
 }

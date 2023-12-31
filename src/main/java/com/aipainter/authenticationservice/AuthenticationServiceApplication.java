@@ -1,6 +1,6 @@
 package com.aipainter.authenticationservice;
 
-import Configuration.Secrets;
+import com.aipainter.authenticationservice.configurations.Secrets;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

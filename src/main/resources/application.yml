@@ -2,15 +2,10 @@ spring:
   config:
     import: optional:secrets.yml
   security:
-    oauth2:
-      client:
-        registration:
-          auth0:
-            client-id: '${secrets.oauthClientKey}'
-            client-secret: '${secrets.oauthClientSecret}'
-            authorization-grant-type: 'authorization_code'
-            redirect-uri: 'http://localhost:8080/login/oauth2/code/auth0'
-            scope: ['openid', 'profile', 'email']
-        provider:
-          auth0:
-            issuer-uri: '${secrets.oauthIssuerUri}'
+     oauth2:
+       client:
+         registration:
+           google:
+             client-id: ${secrets.googleClientKey}'
+             client-secret: '${secrets.googleClientSecret}'
+             redirect-uri: '${secrets.googleRedirectUri}'
