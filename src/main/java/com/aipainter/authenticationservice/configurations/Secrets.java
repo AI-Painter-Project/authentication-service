@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Getter
 @Setter
 public class Secrets {
-    private String googleClientKey;
-    private String googleClientSecret;
-    private String googleRedirectUri;
+    private String oktaIssuer;
+    private String oktaClientKey;
+    private String oktaClientSecret;
 }
