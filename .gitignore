@@ -34,3 +34,4 @@ build/
 
 ### Authentication Service ###
 secrets.yml
+logs/
