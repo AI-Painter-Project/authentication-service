@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties("secrets")
 @Getter
 @Setter
-public class Secrets {
+public class SecretProperties {
     private String oktaIssuer;
     private String oktaClientKey;
     private String oktaClientSecret;
