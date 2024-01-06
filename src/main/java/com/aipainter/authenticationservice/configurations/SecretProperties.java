@@ -11,4 +11,7 @@ public class SecretProperties {
     private String oktaIssuer;
     private String oktaClientKey;
     private String oktaClientSecret;
+    private String dbUrl;
+    private String dbUserMySql;
+    private String dbPasswordMySql;
 }
