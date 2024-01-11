@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AuthenticationController {
-    @GetMapping("/home")
-    public String homePage() {
-        return "Hello World!";
-    }
+  @GetMapping("/home")
+  public String homePage() {
+    return "Hello World!";
+  }
 
-    @GetMapping("/user")
-    public OidcUserInfo userInfo(@AuthenticationPrincipal OidcUser principal) {
-        return principal.getUserInfo();
-    }
+  @GetMapping("/user")
+  public OidcUserInfo userInfo(@AuthenticationPrincipal OidcUser principal) {
+    return principal.getUserInfo();
+  }
 }
