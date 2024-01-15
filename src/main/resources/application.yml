@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: authentication-service
+  config:
+    import: optional:secrets.yml
+  datasource:
+    url: ${secrets.dbUrl}
+    username: ${secrets.dbUserMySql}
+    password: ${secrets.dbPasswordMySql}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+okta:
+  oauth2:
+    issuer: ${secrets.oktaIssuer}
+    client-id: ${secrets.oktaClientKey}
+    client-secret: ${secrets.oktaClientSecret}
+    scopes: openid,profile,email,address,phone,offline_access
+
+logging:
+  level:
+    root: DEBUG
