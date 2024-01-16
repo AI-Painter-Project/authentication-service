@@ -1,9 +1,10 @@
 pipeline {
     agent any
+
     stages {
         stage('Build Package') {
             steps {
-                echo 'mvn clean package'
+                echo 'Executing: mvn clean package'
                 sh 'mvn clean package'
             }
         }
