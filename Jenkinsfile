@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry([credentialsId: 'jenkins-docker', url: '']) {
-                        def dockerImage = docker.build('srijandev123/ai_painter_authentication_service:latest', '-f path/to/Dockerfile .')
+                        def dockerImage = docker.build('srijandev123/ai_painter_authentication_service:latest', '-f Dockerfile .')
                         dockerImage.push()
                     }
                 }
