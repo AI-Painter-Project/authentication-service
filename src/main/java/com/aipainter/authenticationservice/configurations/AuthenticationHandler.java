@@ -15,7 +15,7 @@ import java.io.IOException;
 
 /**
  * Authentication Handler is responsible for handling ops after successful or failed OAuth2 logins.
- * extends see {@link SavedRequestAwareAuthenticationSuccessHandler} to redirect to original requested url post login
+ * extends {@link SavedRequestAwareAuthenticationSuccessHandler} to redirect to original requested url post login
  *
  * @author srijan.srivastav.personal@gmail.com
  */

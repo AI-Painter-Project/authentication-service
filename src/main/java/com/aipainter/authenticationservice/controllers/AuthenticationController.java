@@ -3,6 +3,7 @@ package com.aipainter.authenticationservice.controllers;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.oidc.OidcUserInfo;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -72,5 +73,10 @@ public class AuthenticationController {
   @GetMapping("v1/user")
   public OidcUserInfo userInfo(@AuthenticationPrincipal OidcUser principal) {
     return principal.getUserInfo();
+  }
+
+  @GetMapping("v1/refreshToken")
+  public String refreshToken(@CookieValue(name = "JWT") String expiredJwtToken) {
+    return null;
   }
 }

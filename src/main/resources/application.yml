@@ -18,7 +18,7 @@ okta:
     issuer: ${secrets.oktaIssuer}
     client-id: ${secrets.oktaClientKey}
     client-secret: ${secrets.oktaClientSecret}
-    scopes: openid,profile,email,address,phone,offline_access
+    scopes: openid,profile,email,address,phone
 
 logging:
   level:
