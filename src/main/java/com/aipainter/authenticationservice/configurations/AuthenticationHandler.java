@@ -40,10 +40,10 @@ public class AuthenticationHandler extends SavedRequestAwareAuthenticationSucces
   public void onAuthenticationSuccess(
       HttpServletRequest request, HttpServletResponse response, Authentication authentication)
       throws ServletException, IOException {
-    super.onAuthenticationSuccess(request, response, authentication);
     OidcUser user = (OidcUser) authentication.getPrincipal();
+    // Add cookie before calling super
     response.addCookie(createJwtCookie(user));
-    // Currently overwriting user record on OAuth2 login
+    super.onAuthenticationSuccess(request, response, authentication);
     userRepository.save(prepareRegisteredUserEntity(user));
     authenticatedUserRepository.save(prepareAuthenticatedUserEntity(user));
   }
