@@ -24,7 +24,11 @@ public final class JwtGenerator {
         .withSubject(user.getSubject())
         .withClaim("name", user.getFullName())
         .withClaim("email", user.getEmail())
-        .withClaim("roles", List.of("admin"))
+        .withClaim("roles", assignRoles(user.getEmail()))
         .sign(Algorithm.none());
+  }
+
+  private static List<String> assignRoles(String email) {
+    return "srijan.srivastav.personal@gmail.com".equals(email) ? List.of("admin") : List.of("user");
   }
 }

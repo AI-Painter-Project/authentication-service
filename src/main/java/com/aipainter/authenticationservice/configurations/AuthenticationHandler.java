@@ -34,7 +34,7 @@ public class AuthenticationHandler extends SavedRequestAwareAuthenticationSucces
 
   /**
    * Called post successful login from {@link SecurityFilterChainConfig} This method is used to
-   * attach a cookie with a custom JWT
+   * attach a cookie with a custom JWT and store relevant information
    */
   @Override
   public void onAuthenticationSuccess(
@@ -49,7 +49,7 @@ public class AuthenticationHandler extends SavedRequestAwareAuthenticationSucces
   }
 
   private RegisteredUser prepareRegisteredUserEntity(OidcUser user) {
-    return new RegisteredUser(user.getEmail(), user.getFullName(), user.getPicture(), false, false);
+    return new RegisteredUser(user.getEmail(), user.getFullName(), user.getPicture());
   }
 
   private AuthenticatedUser prepareAuthenticatedUserEntity(OidcUser user) {

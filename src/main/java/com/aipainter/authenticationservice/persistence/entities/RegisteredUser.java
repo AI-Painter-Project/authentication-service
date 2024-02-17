@@ -21,8 +21,4 @@ public class RegisteredUser {
     private String name;
     @Column(name = "picture_url")
     private String pictureUrl;
-    @Column(name = "admin")
-    private boolean isAdmin;
-    @Column(name = "suspended")
-    private boolean isSuspended;
 }
